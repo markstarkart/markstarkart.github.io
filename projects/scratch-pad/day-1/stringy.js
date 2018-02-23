@@ -1,7 +1,6 @@
 // #!/usr/bin/env node
 
 'use strict';
-
 /**
  * IN CLASS EXERCISE: stringy.js
  */
@@ -78,10 +77,10 @@ function toDashCase(string) {
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
     return string[0].toLowerCase() === char.toLowerCase();
-  
+
     // YOUR CODE ABOVE HERE //
 
-
+}
 /**
  * Given an input String and a single character, return true if the String
  * ends with the character, false otherwise. The Function is case insensitive.
@@ -96,17 +95,11 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    if (string[string.length-1] === char) {
-            return true;
-        } else if (string[string.length-1].toUpperCase() === char) {
-          return true;
-        } else {
-            return false;
-        }}
+    return string[string.length - 1].toLowerCase() === char.toLowerCase();
 
 
     // YOUR CODE ABOVE HERE //
-
+}
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
@@ -130,7 +123,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    return args.join("");
 
     // YOUR CODE ABOVE HERE //
 }
@@ -142,7 +135,12 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if (stringOne.length > stringTwo.length) {
+        return stringOne;
+    }
+    else {
+        return stringTwo;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -157,11 +155,21 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if (stringOne < stringTwo) {
+        return 1;
+    }
+    else if (stringOne > stringTwo) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
 
 
     // YOUR CODE ABOVE HERE //
 }
+
+
 
 
 /**
@@ -173,7 +181,15 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if (stringOne > stringTwo) {
+        return 1;
+    }
+    else if (stringOne < stringTwo) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
 
 
 

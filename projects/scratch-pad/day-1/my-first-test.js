@@ -10,15 +10,15 @@
  */
 
 /** 
- * Given an input value, print the value to the screen using console.log().
- */
-function print(value) {
-  // YOUR CODE BELOW HERE //
-  console.log(value);
-  
-  
-  // YOUR CODE ABOVE HERE //
-}
+ * Given an input value, print the value to the screen using console.log().*/
+
+ function print(value) {
+   // YOUR CODE BELOW HERE //
+   console.log(value);
+
+
+   // YOUR CODE ABOVE HERE //
+ }
 
 
 

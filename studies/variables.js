@@ -1,35 +1,30 @@
-/*
- * VARIABLES:
- *
- * 0. To hold things in memory during the life-cycle of a program, we can use variables.  Variables 
- * are named identifiers that can point to values of a particular type, like a Number, String, 
- * Boolean, Array, Object or another data-type.  Variables are called so because once created, we 
- * can CHANGE the value (and type of value) to which they point.
- *
- * 1. To create a variable we use the keyword, var, followed by a name (id or alias) for our 
- * variable.
- *
- * 2. There are 2 phases of using variables: declaration and initialization (or assignment).
- */
+// VARIABLES:
 
-// 1. declaration //
-var myName; 
+// 0. Variables are containers to hold things during the life of a program. We can use variables. 
+//     Variables are named identifiers to point to values of our data-types, like a 
+//     Number, String, Boolean, Object, Array, Function, etcetera. We call them variables because
+//     after we create them we can ALTER the value (and type of value) that they point to.
 
-/*
- * At the declaration phase, the variable myName is undefined because we have NOT initialized 
- * it to anything 
- */ 
-console.log(myName); // prints => undefined
+// 1.  To create a variable we the keyword, var, followed by a name for our variable. It is standard practice
+//      to use camelCase declaring a variable.
 
-// 2. initialization or assignment //
-myName = 'john';
-console.log(myName); // prints => john
+// 2. There are two phases of using variables: declaration and initialization(or assignment). 
 
-// 3. re-assignment //
-myName = 'bob';
-console.log(myName); // prints => bob
+//1.  declaration //
+var sampleString;
+	//At the declaration phase, the variable sampleString is undefined because //
+ //we have not assigned it any value. //
+console.log(sampleString); // prints ⇒ undefined
 
-// NOTE: We can assign and re-assign anything to a variable - we cannot do this with constants //
+//2. initialization or assignment //
+sampleString = "I am string";
+console.log(sampleString); // prints => a string
+
+//3. re-assignment //
+sampleString = "still a string";
+console.log(sampleString); // prints => still a string
+
+//NOTE: we can assign and re-assign anything to a variable - this is not possible with constants //
 var myVariable = 1;
-var myVariable = true;
-myVariable = "someString";
+myVariable = true;
+myVariable = "somestring";

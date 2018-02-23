@@ -5,9 +5,10 @@
 /**
  * 3: range()
  *
- *  a. Create a function called range that takes two integers as 
- *  parameters and returns an Array containing all integers 
- *  between the two parameters, inclusively.  For example:
+ *  a. Create a function
+ *          called range that takes two integers as parameters and 
+ *          returns an Array containing all integers 
+ *          between the two parameters, inclusively.  For example:
  *
  *      range(8, 14);  // => [8, 9, 10, 11, 12, 13, 14]
  *
@@ -23,9 +24,18 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
+    var rangeArr = [];
+  if (start < end){
+    for (var i = start; i <= end; i++) {
+       rangeArr.push(i);
+    }
+  } else if (start > end){
+    for (var j = start; j >= end; j--) {
+       rangeArr.push(j);
+    }
+  }
+    return rangeArr;
+
     
     // YOUR CODE GOES ABOVE HERE //
 }

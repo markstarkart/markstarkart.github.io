@@ -1,17 +1,18 @@
 // #!/usr/bin/env node
-
 'use strict';
 
 /**
  * 4: Contact List
  * 
- *  a. Create a factory Function called makeContact(id, nameFirst, nameLast) 
- *     that returns a contact object.
+ *  a. Create a factory Function
+ *          called makeContact(id, nameFirst, nameLast) that 
+ *          returns a contact object.
  *     
  *          ex: makeContact(1, 'Max', 'Gaudin'); // => {id: 1, nameFirst: 'Max', nameLast: 'Gaudin'}
  *     
- *  b. Create a factory Function called makeContactList that returns an Object 
- *     that manages contacts. The contact-list object should have the following API:
+ *  b. Create a factory Function 
+ *          called makeContactList that 
+ *          returns an Object that manages contacts. The contact-list object should have the following API:
  *       
  *      1. length(): returns the number of contacts within the list.
  *      2. addContact(contact): takes a contact object to be added to the 
@@ -36,31 +37,58 @@
  */
 
 // YOUR CODE GOES BELOW HERE //
-function makeContact(id, nameFirst, nameLast) {
+var contact;
 
-} 
+function makeContact(id, nameFirst, nameLast) {
+    var contact = {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast,
+    }
+    return contact;
+}
 
 
 function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
-    
+    var contacts = [];
+
     return {
-        // we implemented the length api for you //
+        addContact: function(contact) {
+            return contacts.push(contact);
+        },
+
         length: function() {
             return contacts.length;
+        },
+        findContact: function(fullName) {
+            for (var i = 0; i < contacts.length; i++) {
+                if (fullName === contacts[i].nameFirst + " " + contacts[i].nameLast) {
+                    return contacts[i];
+                }
+            }
+        },
+        removeContact: function(contact) {
+            return contacts.shift(contact);
+        },
+        printAllContactNames: function() {
+            var printContNames = [];
+            for (var j = 0; j < contacts.length; j++) {
+                printContNames.push(contacts[j].nameFirst + " " + contacts[j].nameLast);
+            }
+            return printContNames.join('\n');
         }
+
     }
+
 }
 
 
 
 
 // YOUR CODE GOES ABOVE HERE //
-
-
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

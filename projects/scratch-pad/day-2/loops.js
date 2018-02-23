@@ -1,7 +1,6 @@
 // #!/usr/bin/env node
 
 'use strict';
-
 /**
  * IN CLASS EXERCISE: LOOPS
  */
@@ -12,10 +11,12 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  for (var i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -25,10 +26,12 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+
+  for (var i = array.length - 1; i > -1; i--) {
+    console.log(array[i]);
+  }
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -38,10 +41,12 @@ function printArrayValuesInReverse(array) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  for (var key in object) {
+    console.log(object[key]);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -50,10 +55,11 @@ function printObjectValues(object) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+
+  return Object.keys(object);
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -63,10 +69,12 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  for (var keys in object) {
+    console.log(keys);
+  }
+
+
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -75,28 +83,36 @@ function printObjectKeys(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  return Object.keys(object).length;
+
+
   // YOUR CODE ABOVE HERE //
 }
 
 /** 
- * Given an input Object, how might we loop over the Object IN REVERSE and 
+ * Given an input Object,
+ * how might we loop over the Object IN REVERSE and 
  * print its values using console.log()?
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  var objVals = [];
+  for (var key in object) {
+    objVals.push(object[key]);
+  }
+
+
+  var revObjVals = objVals.reverse();
+
+  for (var i = 0; i < revObjVals.length; i++) {
+    console.log(revObjVals[i]);
+  }
+
+
+
+
   // YOUR CODE ABOVE HERE //
 }
-
-
-
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
