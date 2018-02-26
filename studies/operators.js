@@ -129,7 +129,7 @@ var message = 'Hello';
 message += ' World!'; 
 console.log(message); // prints 'Hello World!' 
 
-same as doing: 
+//same as doing: 
 var message = 'Hello';
 message = message + ' World!'; 
 console.log(message); // prints 'Hello World!'
@@ -162,16 +162,6 @@ console.log(1 - 1);
 console.log(typeof 1); 
 console.log(typeof "Matteo"); 
 console.log(typeof (1 < 2)); 
-
-x = 42;
-var y = 43;
-myobj = new Number();
-myobj.h = 4;    // create property h
-delete x;       // returns true (can delete if declared implicitly)
-delete y;       // returns false (cannot delete if declared with var)
-delete Math.PI; // returns false (cannot delete predefined properties)
-delete myobj.h; // returns true (can delete user-defined properties)
-delete myobj;   // returns true (can delete if declared implicitly)
 
 //negation, the bang operator: flips the truthiness of a value 
 
