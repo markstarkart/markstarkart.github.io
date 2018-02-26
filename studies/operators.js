@@ -11,7 +11,7 @@
 
 // Assignment operators:  the = character allows us to assign value to a variable. 
 
-Var x = 5; 
+var x = 5; 
 
 // Comparison operators: Comparison Operators compare two values (two operands) 
 // and evaluate to a Boolean , true or false . < less than, 
