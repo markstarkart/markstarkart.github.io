@@ -156,12 +156,16 @@ var status = (age >= 18) ? 'adult' : 'minor';
 // typeof, delete, void(The void operator specifies an expression to be 
 // evaluated without returning a value)  are examples.
 
-var i = 1; 
-console.log(-i); 
-console.log(1 - 1); 
-console.log(typeof 1); 
-console.log(typeof "Matteo"); 
-console.log(typeof (1 < 2)); 
+// x = 42;
+// var y = 43;
+// myobj = new Number();
+// myobj.h = 4;    // create property h
+// delete x;       // returns true (can delete if declared implicitly)
+// delete y;       // returns false (cannot delete if declared with var)
+// delete Math.PI; // returns false (cannot delete predefined properties)
+// delete myobj.h; // returns true (can delete user-defined properties)
+// delete myobj;   // returns true (can delete if declared implicitly)
+
 
 //negation, the bang operator: flips the truthiness of a value 
 
@@ -185,4 +189,43 @@ console.log(contact);
  
 if (contact) { 
 console.log( 'we have contact');
+}
+// typeof operator: this unary operator is used to return a String telling us 
+// what type the value is.
+
+typeof 1; // => 'number' 
+typeof 'a'; // => 'string' 
+typeof false; // => 'boolean'
+
+// typeof does not work well for some date-types. Array, null, and Date will 
+// return ‘object’ when tested with typeof, because these values are actually 
+// objects. JavaScript as some workarounds for dealing with these data-types
+
+// Array.isArray():
+Array.isArray([]) // => true; 
+Array.isArray({}) // => false; 
+
+// Array.myArray() is a utility method that is a property of the Array 
+// Constructor Function. Functions in JavaScript are first class Objects and 
+// like any Object, can have properties.  
+
+// The instanceof is a binary operator that compares a value’s prototypal chain 
+// to its Constructor Function(the Function from which the instance of the value 
+// was created, if any).
+
+// An Object Intended to be a Collection (Eliminating Non Object Objects): a 
+// multi step function to ensure your Object is really an Object.
+
+function isObject(value) {
+ // Arrays will test positive for Object if used with typeof, so use Array.i sArray() // 
+if(Array.isArray(value)) return false;
+
+// null will test positive for Object if used with typeof, so test using strict comparison // 
+if(value === null) return false;
+
+ // Date will test positive for Object if used with typeof, so test using in stanceof //
+ if(value instanceof Date) return false;
+
+// Finally, we're clear to use typeof on any other value //
+if(typeof value === 'object') return true; 
 }
